@@ -178,11 +178,11 @@ const INHOUD = {
       ]
     },
     {
-      foto: "ook-2.jpg",
+      foto: "ook-interieur.jpg",
       titel: "Prijswinnende binnenhuisarchitectuur",
       tekst: [
         "Ook binnen maakt Bassie het verschil. Als binnenhuisarchitect ontwerpt hij interieurs waarin elk detail een verhaal vertelt, vaak meerdere tegelijk.",
-        "Dit woonvertrek is een schoolvoorbeeld van zijn handschrift: authentiek behang met een natuurlijk afbladderend patroon, een vintage televisie als blikvanger, en een vloer waarop de deur bewust als designelement is neergelegd. Het plafond kreeg een rustieke, open houtafwerking en de koffers op de kast geven de ruimte een gevoel van avontuur.",
+        "Deze salon is een schoolvoorbeeld van zijn handschrift: warme, roze wanden met een natuurlijk craquelé-effect, een plafond in handgemaakt brokkelstuc en een rijk tapijt dat royaal is bestrooid met decoratieve snippers. Het meubilair is in een gezellige kring opgesteld, zodat er altijd plek is voor bezoek, en de schilderijen hangen bewust net niet recht. De tl-buis zorgt voor een eerlijk, industrieel licht.",
         "Voor zijn creativiteit en uitmuntende smaak won Bassie onder meer de Gouden Toeter voor Interieur, de Nergenshuizer Stofprijs en de vakjuryprijs voor Meest Doorleefde Woonkamer. Drie jaar op rij."
       ]
     }

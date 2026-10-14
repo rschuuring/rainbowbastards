@@ -121,6 +121,13 @@
           <h2>${esc(h.uitgelichtKop)}</h2>
           <div class="raster">${D.projecten.slice(0, 3).map(projectKaart).join("")}</div>
         </div></section>
+        ${D.ook && D.ook.length ? `<section class="blok"><div class="breed">
+          <h2>${esc(D.ookKop)}</h2>
+          <div class="raster ook-raster">${D.ook.map((o) => `<a class="kaart project-kaart" href="diensten.html#ook">
+            ${foto(o.foto, o.titel, "kaart-foto")}
+            <div class="kaart-tekst"><h3>${esc(o.titel)}</h3><p>${esc(o.tekst[0])}</p><span class="lees-meer">Lees meer</span></div>
+          </a>`).join("")}</div>
+        </div></section>` : ""}
         <section class="blok zacht"><div class="breed eigenaar-blok">
           ${foto(D.overOns.foto, D.overOns.naam, "portret")}
           <div>
@@ -191,7 +198,7 @@
             </div>`).join("")}
           </div>
         </div></section>
-        ${D.ook && D.ook.length ? `<section class="blok zacht"><div class="breed">
+        ${D.ook && D.ook.length ? `<section class="blok zacht" id="ook"><div class="breed">
           <h2>${esc(D.ookKop)}</h2>
           <p class="intro">${esc(D.ookIntro)}</p>
           ${D.ook.map((o) => `<div class="ook-item">
@@ -330,4 +337,4 @@
 })();
 
 // Als alleen het #-deel van het adres verandert (ander project), laadt de browser de pagina niet opnieuw. Dat doen we dan zelf.
-window.addEventListener("hashchange", () => location.reload());
+window.addEventListener("hashchange", () => { if (document.body.dataset.pagina === "project") location.reload(); });

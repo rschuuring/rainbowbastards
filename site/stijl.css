@@ -327,3 +327,6 @@ figcaption span { color: var(--grijs); }
 /* De foto's in "Dit kunnen wij ook" behouden hun eigen verhouding (staand of liggend). */
 .ook-foto { aspect-ratio: auto; max-height: none; }
 .ook-foto img { height: auto; max-height: 680px; }
+/* Ruimte onder de vaste kop als je naar een #-anker springt */
+[id] { scroll-margin-top: 90px; }
+.ook-raster { grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); }
