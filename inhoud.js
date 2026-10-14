@@ -51,7 +51,7 @@ const INHOUD = {
 
   // ---------- Home ----------
   home: {
-    foto: "home-header.jpg",
+    foto: "project-1-3.jpg",
     kop: "Rainbow Bastards. Bouwen met karakter.",
     intro: "Al twaalf jaar realiseert Rainbow Bastards bouwprojecten die blijven hangen. Bij opdrachtgevers, bij buren en soms ook bij de gemeente.",
     knopTekst: "Bekijk onze projecten",
