@@ -134,18 +134,10 @@ const INHOUD = {
   // ---------- Diensten ----------
   dienstenPagina: {
     kop: "Onze diensten",
-    intro: "Van nieuwbouw tot het nauwkeurig afstemmen van uw scheefstand: Rainbow Bastards levert vakwerk op elk gebied."
+    intro: "Van open-air dakkapellen tot het nauwkeurig afstemmen van uw scheefstand: Rainbow Bastards levert vakwerk op elk gebied."
   },
 
   diensten: [
-    {
-      titel: "Renovatie en restauratie",
-      tekst: "Wij geven bestaande panden een tweede leven. Of een derde, afhankelijk van hoe het eerste ging."
-    },
-    {
-      titel: "Nieuwbouw",
-      tekst: "Van fundering tot nok verzorgen wij het complete bouwproces, met oog voor detail en een open blik op de bouwtekening."
-    },
     {
       titel: "Open-air dakkapellen",
       tekst: "Ons specialisme. Een dakkapel zonder glas, kozijn of dak, voor wie maximaal contact met de buitenlucht wil. Prijs op aanvraag, regen gratis."
@@ -153,14 +145,6 @@ const INHOUD = {
     {
       titel: "Moderne en luxe gevels",
       tekst: "Onze tweede specialiteit. Gevels met karakter, diepte en een eigenzinnig kozijnenplan. Geen twee ramen hetzelfde, geen ruit overbodig."
-    },
-    {
-      titel: "Dakwerken",
-      tekst: "Plat dak, schuin dak of geen dak: wij adviseren u graag over de mogelijkheden."
-    },
-    {
-      titel: "Badkamers en sanitair",
-      tekst: "Een complete badkamer op maat. Waterdicht, of in elk geval nat."
     },
     {
       titel: "Scheefstand op maat",
