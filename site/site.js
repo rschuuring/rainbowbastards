@@ -9,6 +9,12 @@
   const D = INHOUD;
   const FOTOMAP = "fotos/";
 
+  // Een foto in inhoud.js mag een bestandsnaam zijn of { bestand, tekst }.
+  // Hier maken we er overal { bestand, tekst } van, zodat de rest van de code één vorm kent.
+  D.projecten.forEach((p) => {
+    p.fotos = p.fotos.map((f) => (typeof f === "string" ? { bestand: f, tekst: "" } : { bestand: f.bestand, tekst: f.tekst || "" }));
+  });
+
   // Zet tekens als < en & om, zodat tekst uit inhoud.js altijd als tekst wordt getoond.
   function esc(tekst) {
     return String(tekst)
@@ -83,7 +89,7 @@
 
   function projectKaart(p) {
     return `<a class="kaart project-kaart" href="project.html?id=${encodeURIComponent(p.id)}">
-      ${foto(p.fotos[0], p.titel, "kaart-foto")}
+      ${foto(p.fotos[0].bestand, p.titel, "kaart-foto")}
       <div class="kaart-tekst">
         <p class="label">${esc(p.plaats)} · ${esc(p.jaar)}</p>
         <h3>${esc(p.titel)}</h3>
@@ -115,7 +121,17 @@
           <h2>${esc(h.uitgelichtKop)}</h2>
           <div class="raster">${D.projecten.slice(0, 3).map(projectKaart).join("")}</div>
         </div></section>
-        <section class="blok zacht"><div class="breed smal oproep">
+        <section class="blok zacht"><div class="breed eigenaar-blok">
+          ${foto(D.overOns.foto, D.overOns.naam, "portret")}
+          <div>
+            <p class="label">${esc(h.eigenaarLabel)}</p>
+            <h2>${esc(h.eigenaarKop)}</h2>
+            <blockquote>“${esc(h.eigenaarCitaat)}”</blockquote>
+            <p class="ondertekening"><strong>${esc(D.overOns.naam)}</strong>, ${esc(D.overOns.functie.toLowerCase())}</p>
+            <a class="knop" href="over-ons.html">${esc(h.eigenaarKnop)}</a>
+          </div>
+        </div></section>
+        <section class="blok"><div class="breed smal oproep">
           <h2>${esc(h.afsluitingKop)}</h2>
           <p>${esc(h.afsluitingTekst)}</p>
           <a class="knop" href="contact.html">Neem contact op</a>
@@ -138,8 +154,12 @@
           <section class="blok"><div class="breed"><a class="knop" href="projecten.html">Naar alle projecten</a></div></section>`;
       }
       document.title = `${p.titel} · ${D.bedrijf.naam}`;
+      const hoofd = p.fotos[0];
       const galerij = p.fotos
-        .map((f, i) => `<button class="galerij-item" data-index="${i}" aria-label="Foto ${i + 1} vergroten">${foto(f, `${p.titel}, foto ${i + 1}`)}</button>`)
+        .map((f, i) => `<figure class="galerij-figuur">
+          <button class="galerij-item" data-index="${i}" aria-label="Foto ${i + 1} vergroten">${foto(f.bestand, f.tekst || `${p.titel}, foto ${i + 1}`)}</button>
+          ${f.tekst ? `<figcaption>${esc(f.tekst)}</figcaption>` : ""}
+        </figure>`)
         .join("");
       return `
         <section class="pagina-kop"><div class="breed">
@@ -147,13 +167,16 @@
           <h1>${esc(p.titel)}</h1>
         </div></section>
         <section class="blok"><div class="breed project-opbouw">
-          ${foto(p.fotos[0], p.titel, "project-hoofdfoto")}
+          <figure class="project-figuur">
+            ${foto(hoofd.bestand, hoofd.tekst || p.titel, "project-hoofdfoto")}
+            ${hoofd.tekst ? `<figcaption>${esc(hoofd.tekst)}</figcaption>` : ""}
+          </figure>
           <div class="tekst">${alineas(p.beschrijving)}</div>
         </div></section>
-        <section class="blok zacht"><div class="breed">
+        ${p.fotos.length > 1 ? `<section class="blok zacht"><div class="breed">
           <h2>Fotogalerij</h2>
           <div class="galerij" data-fotos='${esc(JSON.stringify(p.fotos))}' data-titel="${esc(p.titel)}">${galerij}</div>
-        </div></section>`;
+        </div></section>` : ""}`;
     },
 
     diensten() {
@@ -166,7 +189,15 @@
               <h3>${esc(d.titel)}</h3><p>${esc(d.tekst)}</p>
             </div>`).join("")}
           </div>
-        </div></section>`;
+        </div></section>
+        ${D.ook && D.ook.length ? `<section class="blok zacht"><div class="breed">
+          <h2>${esc(D.ookKop)}</h2>
+          <p class="intro">${esc(D.ookIntro)}</p>
+          ${D.ook.map((o) => `<div class="ook-item">
+            ${foto(o.foto, o.titel, "ook-foto")}
+            <div class="tekst"><h3>${esc(o.titel)}</h3>${alineas(o.tekst)}</div>
+          </div>`).join("")}
+        </div></section>` : ""}`;
     },
 
     overons() {
@@ -230,9 +261,10 @@
 
     function toon(i) {
       huidig = (i + fotos.length) % fotos.length;
-      img.src = FOTOMAP + fotos[huidig];
-      img.alt = `${titel}, foto ${huidig + 1}`;
-      teller.textContent = `${huidig + 1} / ${fotos.length}`;
+      const f = fotos[huidig];
+      img.src = FOTOMAP + f.bestand;
+      img.alt = f.tekst || `${titel}, foto ${huidig + 1}`;
+      teller.textContent = `${huidig + 1} / ${fotos.length}${f.tekst ? " · " + f.tekst : ""}`;
     }
 
     galerij.addEventListener("click", (e) => {

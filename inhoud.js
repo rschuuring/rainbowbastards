@@ -61,6 +61,11 @@ const INHOUD = {
       { getal: "100%", tekst: "karakter in elk pand" }
     ],
     uitgelichtKop: "Uitgelichte projecten",
+    // Blok "maak kennis met de eigenaar" (de foto komt van overOns.foto hieronder)
+    eigenaarLabel: "De eigenaar",
+    eigenaarKop: "Dertig jaar vakmanschap, één visie.",
+    eigenaarCitaat: "Een gebouw is pas af als het een verhaal vertelt. Bij ons vertelt elk gebouw er meerdere.",
+    eigenaarKnop: "Lees ons verhaal",
     afsluitingKop: "Een project met Rainbow Bastards?",
     afsluitingTekst: "Neem vrijblijvend contact op. Wij komen graag langs om de mogelijkheden te bespreken, en de onmogelijkheden ook."
   },
@@ -77,18 +82,18 @@ const INHOUD = {
       titel: "Villa Scheefzicht",
       plaats: "Nergenshuizen",
       jaar: "2019",
-      samenvatting: "Volledige renovatie van een monumentaal pand, karaktervol opgeleverd.",
+      samenvatting: "Volledige renovatie van een monumentaal landgoed, karaktervol opgeleverd.",
       beschrijving: [
-        "Dit monumentale pand werd door Rainbow Bastards volledig karaktervol opgeleverd. Waar anderen een rechte gevel zagen, zagen wij potentie.",
-        "Bewust hebben wij gekozen voor een hellingshoek van circa elf graden. Dit geeft de villa een dynamisch en uitnodigend silhouet dat geen enkele bezoeker ontgaat.",
-        "Het resultaat is een woning met een uniek perspectief, letterlijk."
+        "Dit monumentale pand werd door Rainbow Bastards volledig karaktervol opgeleverd. Waar anderen een vervallen schuur zagen, zagen wij een villa.",
+        "Voor de voorgevel kozen wij authentiek vergrijsd hout, met de hand verweerd door ruim veertig winters. De woning beschikt over een vrijstaande, open keuken met een originele koelunit uit de jaren zestig.",
+        "Bijzonder trots zijn wij op de zijgevel. In nauw overleg met de opdrachtgever is een volwassen boom volledig in het ontwerp opgenomen. Hij zorgt voor natuurlijke zonwering, privacy en zuurstof, en onttrekt bovendien op elegante wijze de delen van de gevel aan het zicht die nog in de offerte stonden.",
+        "De oostvleugel kreeg een dynamische knik in de nok, die het silhouet een speels en eigentijds karakter geeft. Onze constructeur spreekt van gecontroleerde zwaartekracht."
       ],
+      // Een foto kan een bestandsnaam zijn, of { bestand: "...", tekst: "onderschrift" }
       fotos: [
-        "project-1-1.jpg",
-        "project-1-2.jpg",
-        "project-1-3.jpg",
-        "project-1-4.jpg",
-        "project-1-5.jpg"
+        { bestand: "project-1-1.jpg", tekst: "Voorgevel met vrijstaande koelunit" },
+        { bestand: "project-1-2.jpg", tekst: "Zijgevel met geïntegreerde boom" },
+        { bestand: "project-1-3.jpg", tekst: "Oostvleugel met dynamische knik" }
       ]
     },
     {
@@ -96,37 +101,32 @@ const INHOUD = {
       titel: "Woonboerderij Het Open Dak",
       plaats: "Achterom-Dorp",
       jaar: "2021",
-      samenvatting: "Innovatieve dakconstructie met maximale lichtinval.",
+      samenvatting: "Twee innovatieve dakconcepten onder één (gedeeltelijk) dak.",
       beschrijving: [
-        "Voor deze historische boerderij ontwikkelde Rainbow Bastards een baanbrekend dakconcept: het panoramische hemelplafond.",
-        "Door de traditionele dakbedekking volledig weg te laten, geniet de bewoner van onbeperkt daglicht, natuurlijke ventilatie en een gratis regenwatervoorziening in elke kamer.",
-        "Een duurzame keuze waar wij bijzonder trots op zijn."
+        "Bij Woonboerderij Het Open Dak draait alles om één onderdeel: het dak. En daar is Rainbow Bastards bijzonder trots op.",
+        "Aan de voorzijde ontwierpen wij een traditioneel pannendak met een innovatief open middendeel. Dit zogenoemde hemelvenster zorgt voor maximale lichtinval, natuurlijke ventilatie en vrij zicht op de sterren vanuit elke kamer. De overgebleven dakpannen zijn als sierlijke grindtuin rond de woning verwerkt.",
+        "Voor de achterzijde kozen wij bewust voor contrast: een kunstzinnig patchwork van golfplaten in zeven natuurlijke tinten roest. Een eerbetoon aan onze bedrijfsnaam: een regenboog, maar dan van staal.",
+        "Twee gevels, twee dakconcepten, één visie. Zonder overdrijving het mooiste dak dat wij ooit gedeeltelijk hebben gelegd."
       ],
       fotos: [
-        "project-2-1.jpg",
-        "project-2-2.jpg",
-        "project-2-3.jpg",
-        "project-2-4.jpg",
-        "project-2-5.jpg"
+        { bestand: "project-2-1.jpg", tekst: "Vooraanzicht met hemelvenster" },
+        { bestand: "project-2-2.jpg", tekst: "Achteraanzicht met regenboogdak van golfplaat" }
       ]
     },
     {
-      id: "de-laatste-muur",
-      titel: "Appartementencomplex De Laatste Muur",
+      id: "open-air-dakkapel",
+      titel: "Herenhuis De Frisse Blik",
       plaats: "Brokkelveen",
       jaar: "2023",
-      samenvatting: "Minimalistische nieuwbouw met een radicaal open plattegrond.",
+      samenvatting: "Uitbreiding met een open-air dakkapel, ons specialisme.",
       beschrijving: [
-        "Met De Laatste Muur zet Rainbow Bastards een nieuwe standaard in minimalistisch wonen. Van het oorspronkelijke ontwerp hebben wij alleen het essentiële behouden: één muur.",
-        "De radicaal open plattegrond biedt de bewoners totale vrijheid in indeling, uitzicht en windrichting.",
-        "Opgeleverd binnen planning en, naar eigen zeggen, ruim binnen budget."
+        "Herenhuis De Frisse Blik is het visitekaartje van ons specialisme: de open-air dakkapel. Een techniek die Bassie in dertig jaar tot in de perfectie heeft ontwikkeld.",
+        "Waar een traditionele dakkapel wordt afgesloten met kozijnen, glas en een dak, laten wij bewust alles weg wat tussen de bewoner en de buitenlucht staat. Het resultaat is een dakkapel met onbeperkte stahoogte, een ongeëvenaarde akoestiek bij regen en een uitzicht dat letterlijk nergens ophoudt.",
+        "Ook de rest van de woning ademt vakmanschap. De dakbedekking is uitgevoerd in een subtiel kleurenpalet van grijs en mosgroen, en de begane grond aan de oostzijde is volledig opengewerkt tot een royale, natuurlijk geventileerde overkapping op palen.",
+        "Inmiddels zijn wij in de regio de onbetwiste specialist in open-air dakkapellen. Geen enkele andere aannemer durft ze te maken."
       ],
       fotos: [
-        "project-3-1.jpg",
-        "project-3-2.jpg",
-        "project-3-3.jpg",
-        "project-3-4.jpg",
-        "project-3-5.jpg"
+        { bestand: "project-3-1.jpg", tekst: "Open-air dakkapel, zuidzijde" }
       ]
     }
   ],
@@ -145,6 +145,14 @@ const INHOUD = {
     {
       titel: "Nieuwbouw",
       tekst: "Van fundering tot nok verzorgen wij het complete bouwproces, met oog voor detail en een open blik op de bouwtekening."
+    },
+    {
+      titel: "Open-air dakkapellen",
+      tekst: "Ons specialisme. Een dakkapel zonder glas, kozijn of dak, voor wie maximaal contact met de buitenlucht wil. Prijs op aanvraag, regen gratis."
+    },
+    {
+      titel: "Moderne en luxe gevels",
+      tekst: "Onze tweede specialiteit. Gevels met karakter, diepte en een eigenzinnig kozijnenplan. Geen twee ramen hetzelfde, geen ruit overbodig."
     },
     {
       titel: "Dakwerken",
@@ -169,6 +177,30 @@ const INHOUD = {
     {
       titel: "Toeterkeuring",
       tekst: "Periodieke inspectie van alle toeters en claxons in en rond uw woning, volgens de geldende normen."
+    }
+  ],
+
+  // ---------- Dit kunnen wij ook (staat onder de diensten) ----------
+  // Voorbeelden van vakmanschap die geen project zijn. Elk blok: foto, titel, tekst.
+  ookKop: "Dit kunnen wij ook",
+  ookIntro: "Naast daken en dakkapellen leveren wij met hetzelfde gemak complete woningen op. Een greep uit ons kunnen.",
+  ook: [
+    {
+      foto: "ook-1.jpg",
+      titel: "Complete woningen, inclusief luxe gevel",
+      tekst: [
+        "Rainbow Bastards levert zelfs complete huizen op, van fundering tot schoorsteen. Wij zijn gespecialiseerd in moderne en luxe gevels, en dat ziet u terug in elk detail.",
+        "Warme okertinten, een levendig spel van stucwerk en blootgelegd metselwerk, en houten kozijnen die bewust in verschillende hoeken zijn geplaatst voor een speels lichtspel binnen. Het smeedijzeren balkon heeft een ontspannen hellingshoek, en het naambordje op de voordeur is nog blanco, zodat de bewoner er een persoonlijke touch aan kan geven."
+      ]
+    },
+    {
+      foto: "ook-2.jpg",
+      titel: "Prijswinnende binnenhuisarchitectuur",
+      tekst: [
+        "Ook binnen maakt Bassie het verschil. Als binnenhuisarchitect ontwerpt hij interieurs waarin elk detail een verhaal vertelt, vaak meerdere tegelijk.",
+        "Dit woonvertrek is een schoolvoorbeeld van zijn handschrift: authentiek behang met een natuurlijk afbladderend patroon, een vintage televisie als blikvanger, en een vloer waarop de deur bewust als designelement is neergelegd. Het plafond kreeg een rustieke, open houtafwerking en de koffers op de kast geven de ruimte een gevoel van avontuur.",
+        "Voor zijn creativiteit en uitmuntende smaak won Bassie onder meer de Gouden Toeter voor Interieur, de Nergenshuizer Stofprijs en de vakjuryprijs voor Meest Doorleefde Woonkamer. Drie jaar op rij."
+      ]
     }
   ],
 
