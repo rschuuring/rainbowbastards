@@ -110,7 +110,8 @@ const INHOUD = {
       ],
       fotos: [
         { bestand: "project-2-1.jpg", tekst: "Vooraanzicht met hemelvenster" },
-        { bestand: "project-2-achter.jpg", tekst: "Achteraanzicht met open lattendak en sculpturale steunpalen" }
+        { bestand: "project-2-achter.jpg", tekst: "Achteraanzicht met open lattendak en sculpturale steunpalen" },
+        { bestand: "project-2-bijgebouwen.jpg", tekst: "Bijgebouwen in dezelfde regenboogstijl van golfplaat" }
       ]
     },
     {
