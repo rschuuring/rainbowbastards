@@ -21,33 +21,27 @@ Dubbelklik op `index.html`. Er is geen installatie of webserver nodig.
 
 1. **Teksten:** open `inhoud.js` in een teksteditor (bijvoorbeeld VS Code of Kladblok) en vervang de tekst tussen de aanhalingstekens. Bovenaan het bestand staan de spelregels.
 2. **Foto's:** zet je foto's in de map `fotos`. Gebruik je dezelfde bestandsnamen als hieronder, dan hoef je verder niets te doen. Gebruik je andere namen, pas dan de naam aan in `inhoud.js`.
-3. **Meer of minder foto's per project:** pas de lijst `fotos: [ ... ]` van dat project in `inhoud.js` aan. De galerij past zich vanzelf aan. De eerste foto in de lijst is de hoofdfoto.
+3. **Meer of minder foto's per project:** pas de lijst `fotos: [ ... ]` van dat project in `inhoud.js` aan. De galerij past zich vanzelf aan. De eerste foto in de lijst is de hoofdfoto. Een onderschrift geef je zo: `{ bestand: "naam.jpg", tekst: "Vooraanzicht" }`.
 4. **Project of dienst toevoegen:** kopieer een bestaand blok `{ ... }` in `inhoud.js`, zet er een komma tussen, en pas het aan. Geef een nieuw project een eigen `id` (kleine letters, streepjes in plaats van spaties).
 5. **Ontbreekt een foto?** Dan toont de site een grijs vlak met de bestandsnaam die hij zoekt.
 
 Tip: gebruik liggende foto's van ongeveer 1600 pixels breed (portret van de eigenaar: staand). Grotere foto's maken de site trager op de telefoon.
 
-## Fotolijst met Unsplash-zoektermen
+## Foto's en hun herkomst
 
-| Bestandsnaam | Waar | Zoekterm op Unsplash |
+Alle foto's zijn vrij te gebruiken (Pexels- of Unsplash-licentie). Gebruik geen foto's met het label "Unsplash+": die zijn betaald.
+
+| Bestandsnaam | Waar op de site | Bron |
 |---|---|---|
-| `home-header.jpg` | Grote foto bovenaan de homepage | `abandoned house` |
-| `eigenaar.jpg` | Portret van Bassie (staand) | `clown portrait` |
-| `project-1-1.jpg` | Villa Scheefzicht, hoofdfoto | `abandoned mansion` |
-| `project-1-2.jpg` | Villa Scheefzicht | `crooked house` |
-| `project-1-3.jpg` | Villa Scheefzicht | `abandoned mansion interior` |
-| `project-1-4.jpg` | Villa Scheefzicht | `broken window` |
-| `project-1-5.jpg` | Villa Scheefzicht | `abandoned staircase` |
-| `project-2-1.jpg` | Het Open Dak, hoofdfoto | `abandoned barn` |
-| `project-2-2.jpg` | Het Open Dak | `collapsed roof` |
-| `project-2-3.jpg` | Het Open Dak | `roofless building` |
-| `project-2-4.jpg` | Het Open Dak | `ruined farmhouse` |
-| `project-2-5.jpg` | Het Open Dak | `old barn interior` |
-| `project-3-1.jpg` | De Laatste Muur, hoofdfoto | `demolished building` |
-| `project-3-2.jpg` | De Laatste Muur | `ruined wall` |
-| `project-3-3.jpg` | De Laatste Muur | `building demolition` |
-| `project-3-4.jpg` | De Laatste Muur | `rubble` |
-| `project-3-5.jpg` | De Laatste Muur | `brick wall ruin` |
+| `eigenaar-bassie.jpg` | Over ons en homepage | Pexels, James Bat Barrera |
+| `project-1-1.jpg` t/m `project-1-3.jpg` | Villa Scheefzicht (1-3 ook bovenaan de homepage) | Pexels |
+| `project-2-1.jpg` | Het Open Dak, vooraanzicht | Pexels |
+| `project-2-achter.jpg` | Het Open Dak, achteraanzicht | Pexels, ekrulila |
+| `project-3-1.jpg` | De Frisse Blik | Unsplash, Roger Starnes Sr |
+| `ook-gevel.jpg` | Dit kunnen wij ook: complete woningen | Pexels, Besarta Stafa |
+| `ook-interieur.jpg` | Dit kunnen wij ook: binnenhuisarchitectuur | Pexels, Omer Furkan Yakar |
+
+Tip: geef een vervangende foto een **nieuwe** bestandsnaam en pas die aan in `inhoud.js`. Anders laat een browser soms nog de oude foto zien.
 
 ## Niet vindbaar in zoekmachines
 
