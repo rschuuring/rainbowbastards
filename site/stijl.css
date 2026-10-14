@@ -156,7 +156,7 @@ img { display: block; max-width: 100%; }
 /* Als een foto ontbreekt: grijs vlak met de bestandsnaam die je moet gebruiken. */
 .foto.ontbreekt img { display: none; }
 .foto.ontbreekt::after {
-  content: "Foto ontbreekt: fotos/" attr(data-naam);
+  content: attr(data-melding);
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center; text-align: center;
   padding: 12px; font-size: 0.85rem; color: var(--grijs);

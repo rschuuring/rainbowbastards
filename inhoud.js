@@ -219,6 +219,30 @@ const INHOUD = {
     binnenkortTekst: "Binnenkort kunt u hier ook direct online een afspraak inplannen."
   },
 
+  // ---------- Knoppen en kleine teksten die op meerdere plekken staan ----------
+  taal: "nl",
+  knoppen: {
+    bekijkProject: "Bekijk project",
+    leesMeer: "Lees meer",
+    neemContactOp: "Neem contact op",
+    projecten: "Projecten",
+    projectNietGevonden: "Project niet gevonden",
+    naarAlleProjecten: "Naar alle projecten",
+    fotogalerij: "Fotogalerij",
+    telefoon: "Telefoon",
+    email: "E-mail",
+    adres: "Adres",
+    kvk: "KvK",
+    menu: "Menu",
+    naarHomepage: "naar de homepage",
+    foto: "foto",
+    vergroten: "vergroten",
+    vorigeFoto: "Vorige foto",
+    volgendeFoto: "Volgende foto",
+    sluiten: "Sluiten",
+    fotoOntbreekt: "Foto ontbreekt"
+  },
+
   // ---------- Voettekst ----------
   voet: {
     tekst: "Rainbow Bastards · Bouwen met karakter sinds 2014"

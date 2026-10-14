@@ -8,6 +8,8 @@
 (function () {
   const D = INHOUD;
   const FOTOMAP = "fotos/";
+  const K = D.knoppen;
+  document.documentElement.lang = D.taal || "nl";
 
   // Een foto in inhoud.js mag een bestandsnaam zijn of { bestand, tekst }.
   // Hier maken we er overal { bestand, tekst } van, zodat de rest van de code één vorm kent.
@@ -36,7 +38,7 @@
   }
 
   function logo() {
-    return `<a class="logo" href="index.html" aria-label="${esc(D.bedrijf.naam)}, naar de homepage">
+    return `<a class="logo" href="index.html" aria-label="${esc(D.bedrijf.naam)}, ${esc(K.naarHomepage)}">
       <span class="logo-naam">${esc(D.bedrijf.naam)}</span>
       <span class="logo-regenboog" aria-hidden="true"></span>
       <span class="logo-onder">${esc(D.bedrijf.ondertitel)}</span>
@@ -56,7 +58,7 @@
       <div class="breed kop-binnen">
         ${logo()}
         <button class="menu-knop" aria-expanded="false" aria-controls="hoofdmenu">
-          <span></span><span></span><span></span><span class="verborgen">Menu</span>
+          <span></span><span></span><span></span><span class="verborgen">${esc(K.menu)}</span>
         </button>
         <nav id="hoofdmenu" class="menu"><ul>${links}</ul></nav>
       </div>
@@ -73,7 +75,7 @@
           <p><a href="tel:${esc(b.telefoon.replace(/[^0-9+]/g, ""))}">${esc(b.telefoon)}</a><br>
           <a href="mailto:${esc(b.email)}">${esc(b.email)}</a></p>
         </div>
-        <div><p>KvK ${esc(b.kvk)}</p><p>${esc(D.voet.tekst)}</p></div>
+        <div><p>${esc(K.kvk)} ${esc(b.kvk)}</p><p>${esc(D.voet.tekst)}</p></div>
       </div>
     </footer>`;
   }
@@ -94,7 +96,7 @@
         <p class="label">${esc(p.plaats)} · ${esc(p.jaar)}</p>
         <h3>${esc(p.titel)}</h3>
         <p>${esc(p.samenvatting)}</p>
-        <span class="lees-meer">Bekijk project</span>
+        <span class="lees-meer">${esc(K.bekijkProject)}</span>
       </div>
     </a>`;
   }
@@ -125,7 +127,7 @@
           <h2>${esc(D.ookKop)}</h2>
           <div class="raster ook-raster">${D.ook.map((o) => `<a class="kaart project-kaart" href="diensten.html#ook">
             ${foto(o.foto, o.titel, "kaart-foto")}
-            <div class="kaart-tekst"><h3>${esc(o.titel)}</h3><p>${esc(o.tekst[0])}</p><span class="lees-meer">Lees meer</span></div>
+            <div class="kaart-tekst"><h3>${esc(o.titel)}</h3><p>${esc(o.tekst[0])}</p><span class="lees-meer">${esc(K.leesMeer)}</span></div>
           </a>`).join("")}</div>
         </div></section>` : ""}
         <section class="blok zacht"><div class="breed eigenaar-blok">
@@ -141,7 +143,7 @@
         <section class="blok"><div class="breed smal oproep">
           <h2>${esc(h.afsluitingKop)}</h2>
           <p>${esc(h.afsluitingTekst)}</p>
-          <a class="knop" href="contact.html">Neem contact op</a>
+          <a class="knop" href="contact.html">${esc(K.neemContactOp)}</a>
         </div></section>`;
     },
 
@@ -158,20 +160,20 @@
       const id = decodeURIComponent(location.hash.slice(1)) || new URLSearchParams(location.search).get("id");
       const p = D.projecten.find((x) => x.id === id);
       if (!p) {
-        return `${paginaKop("Project niet gevonden")}
-          <section class="blok"><div class="breed"><a class="knop" href="projecten.html">Naar alle projecten</a></div></section>`;
+        return `${paginaKop(K.projectNietGevonden)}
+          <section class="blok"><div class="breed"><a class="knop" href="projecten.html">${esc(K.naarAlleProjecten)}</a></div></section>`;
       }
       document.title = `${p.titel} · ${D.bedrijf.naam}`;
       const hoofd = p.fotos[0];
       const galerij = p.fotos
         .map((f, i) => `<figure class="galerij-figuur">
-          <button class="galerij-item" data-index="${i}" aria-label="Foto ${i + 1} vergroten">${foto(f.bestand, f.tekst || `${p.titel}, foto ${i + 1}`)}</button>
+          <button class="galerij-item" data-index="${i}" aria-label="${esc(K.foto)} ${i + 1} ${esc(K.vergroten)}">${foto(f.bestand, f.tekst || `${p.titel}, ${K.foto} ${i + 1}`)}</button>
           ${f.tekst ? `<figcaption>${esc(f.tekst)}</figcaption>` : ""}
         </figure>`)
         .join("");
       return `
         <section class="pagina-kop"><div class="breed">
-          <p class="label"><a href="projecten.html">Projecten</a> · ${esc(p.plaats)} · ${esc(p.jaar)}</p>
+          <p class="label"><a href="projecten.html">${esc(K.projecten)}</a> · ${esc(p.plaats)} · ${esc(p.jaar)}</p>
           <h1>${esc(p.titel)}</h1>
         </div></section>
         <section class="blok"><div class="breed project-opbouw">
@@ -182,7 +184,7 @@
           <div class="tekst">${alineas(p.beschrijving)}</div>
         </div></section>
         ${p.fotos.length > 1 ? `<section class="blok zacht"><div class="breed">
-          <h2>Fotogalerij</h2>
+          <h2>${esc(K.fotogalerij)}</h2>
           <div class="galerij" data-fotos='${esc(JSON.stringify(p.fotos))}' data-titel="${esc(p.titel)}">${galerij}</div>
         </div></section>` : ""}`;
     },
@@ -230,11 +232,11 @@
       return `${paginaKop(c.kop, c.intro)}
         <section class="blok"><div class="breed contact-raster">
           <div class="kaart">
-            <h3>Telefoon</h3>
+            <h3>${esc(K.telefoon)}</h3>
             <p><a href="tel:${esc(b.telefoon.replace(/[^0-9+]/g, ""))}">${esc(b.telefoon)}</a></p>
-            <h3>E-mail</h3>
+            <h3>${esc(K.email)}</h3>
             <p><a href="mailto:${esc(b.email)}">${esc(b.email)}</a></p>
-            <h3>Adres</h3>
+            <h3>${esc(K.adres)}</h3>
             <p>${esc(b.naam)}<br>${esc(b.adres.straat)}<br>${esc(b.adres.postcode)} ${esc(b.adres.plaats)}</p>
           </div>
           <div class="kaart">
@@ -260,9 +262,9 @@
     venster.innerHTML = `
       <img alt="">
       <p class="lichtbak-teller"></p>
-      <button class="lichtbak-knop vorige" aria-label="Vorige foto">‹</button>
-      <button class="lichtbak-knop volgende" aria-label="Volgende foto">›</button>
-      <button class="lichtbak-knop sluit" aria-label="Sluiten">×</button>`;
+      <button class="lichtbak-knop vorige" aria-label="${esc(K.vorigeFoto)}">‹</button>
+      <button class="lichtbak-knop volgende" aria-label="${esc(K.volgendeFoto)}">›</button>
+      <button class="lichtbak-knop sluit" aria-label="${esc(K.sluiten)}">×</button>`;
     document.body.appendChild(venster);
     const img = venster.querySelector("img");
     const teller = venster.querySelector(".lichtbak-teller");
@@ -271,7 +273,7 @@
       huidig = (i + fotos.length) % fotos.length;
       const f = fotos[huidig];
       img.src = FOTOMAP + f.bestand;
-      img.alt = f.tekst || `${titel}, foto ${huidig + 1}`;
+      img.alt = f.tekst || `${titel}, ${K.foto} ${huidig + 1}`;
       teller.textContent = `${huidig + 1} / ${fotos.length}${f.tekst ? " · " + f.tekst : ""}`;
     }
 
@@ -320,7 +322,10 @@
 
   // Ontbrekende foto: toon een nette lege vlak met de bestandsnaam.
   document.querySelectorAll(".foto img").forEach((img) => {
-    const markeer = () => img.parentElement.classList.add("ontbreekt");
+    const markeer = () => {
+      img.parentElement.dataset.melding = `${K.fotoOntbreekt}: fotos/${img.parentElement.dataset.naam}`;
+      img.parentElement.classList.add("ontbreekt");
+    };
     img.addEventListener("error", markeer);
     if (img.complete && img.naturalWidth === 0) markeer();
   });
