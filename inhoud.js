@@ -170,7 +170,7 @@ const INHOUD = {
   ookIntro: "Naast daken en dakkapellen leveren wij met hetzelfde gemak complete woningen op. Een greep uit ons kunnen.",
   ook: [
     {
-      foto: "ook-1.jpg",
+      foto: "ook-gevel.jpg",
       titel: "Complete woningen, inclusief luxe gevel",
       tekst: [
         "Rainbow Bastards levert zelfs complete huizen op, van fundering tot schoorsteen. Wij zijn gespecialiseerd in moderne en luxe gevels, en dat ziet u terug in elk detail.",
