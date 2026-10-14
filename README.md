@@ -10,7 +10,8 @@ Dubbelklik op `index.html`. Er is geen installatie of webserver nodig.
 
 | Wat | Waarvoor | Aanpassen? |
 |---|---|---|
-| `inhoud.js` | **Alle** teksten, bedrijfsgegevens, diensten en projecten | Ja |
+| `inhoud.js` | **Alle** Nederlandse teksten, bedrijfsgegevens, diensten en projecten | Ja |
+| `inhoud-en.js` | Dezelfde inhoud in het Engels (voor de NL/EN-knop bovenin) | Ja |
 | `fotos/` | **Alle** foto's | Ja |
 | `index.html`, `projecten.html`, `project.html`, `diensten.html`, `over-ons.html`, `contact.html` | De lege opbouw van elke pagina | Nee |
 | `site/stijl.css` | Opmaak: kleuren, lettertypes, indeling | Alleen als je de stijl wilt veranderen |
@@ -26,6 +27,14 @@ Dubbelklik op `index.html`. Er is geen installatie of webserver nodig.
 5. **Ontbreekt een foto?** Dan toont de site een grijs vlak met de bestandsnaam die hij zoekt.
 
 Tip: gebruik liggende foto's van ongeveer 1600 pixels breed (portret van de eigenaar: staand). Grotere foto's maken de site trager op de telefoon.
+
+## Twee talen
+
+Bovenin de site staat een knop **NL / EN**. De bezoeker kiest een taal en de browser onthoudt die keuze. Zonder keuze krijgt een bezoeker met een Nederlandse browser Nederlands, en anders Engels.
+
+- Nederlandse teksten staan in `inhoud.js`, Engelse in `inhoud-en.js`. Beide bestanden hebben precies dezelfde opbouw.
+- Voeg je een project, dienst of foto toe? Doe dat dan in **beide** bestanden, met dezelfde `id` en dezelfde fotonamen.
+- Wil je maar één taal? Haal dan de regel `<script src="inhoud-en.js"></script>` uit alle `.html`-bestanden weg; de knop verdwijnt dan vanzelf.
 
 ## Foto's en hun herkomst
 

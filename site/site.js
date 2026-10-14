@@ -6,7 +6,19 @@
 */
 
 (function () {
-  const D = INHOUD;
+  // ---------- Taal kiezen ----------
+  // De bezoeker kiest NL of EN met de knop bovenin. Die keuze onthouden we in de browser.
+  // Zonder keuze: Engels als de browser Engels is ingesteld, anders Nederlands.
+  const TALEN = { nl: INHOUD, en: typeof INHOUD_EN !== "undefined" ? INHOUD_EN : null };
+  function leesTaal() {
+    try {
+      const opgeslagen = localStorage.getItem("taal");
+      if (opgeslagen && TALEN[opgeslagen]) return opgeslagen;
+    } catch (e) { /* opslag niet beschikbaar: gewoon doorgaan */ }
+    return (navigator.language || "").toLowerCase().startsWith("nl") || !TALEN.en ? "nl" : "en";
+  }
+  const taal = leesTaal();
+  const D = TALEN[taal];
   const FOTOMAP = "fotos/";
   const K = D.knoppen;
   document.documentElement.lang = D.taal || "nl";
@@ -61,6 +73,9 @@
           <span></span><span></span><span></span><span class="verborgen">${esc(K.menu)}</span>
         </button>
         <nav id="hoofdmenu" class="menu"><ul>${links}</ul></nav>
+        ${TALEN.en ? `<div class="taalkeuze" role="group" aria-label="Taal / Language">
+          ${["nl", "en"].map((t) => `<button type="button" data-taal="${t}" aria-pressed="${t === taal}">${t.toUpperCase()}</button>`).join("")}
+        </div>` : ""}
       </div>
     </header>`;
   }
@@ -334,6 +349,14 @@
     };
     img.addEventListener("error", markeer);
     if (img.complete && img.naturalWidth === 0) markeer();
+  });
+
+  // Taalknop: keuze onthouden en de pagina opnieuw laden in de gekozen taal.
+  document.querySelectorAll(".taalkeuze button").forEach((b) => {
+    b.addEventListener("click", () => {
+      try { localStorage.setItem("taal", b.dataset.taal); } catch (e) { /* niet erg */ }
+      location.reload();
+    });
   });
 
   // Menuknop op de telefoon.
