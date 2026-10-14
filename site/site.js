@@ -88,7 +88,7 @@
   }
 
   function projectKaart(p) {
-    return `<a class="kaart project-kaart" href="project.html?id=${encodeURIComponent(p.id)}">
+    return `<a class="kaart project-kaart" href="project.html#${encodeURIComponent(p.id)}">
       ${foto(p.fotos[0].bestand, p.titel, "kaart-foto")}
       <div class="kaart-tekst">
         <p class="label">${esc(p.plaats)} · ${esc(p.jaar)}</p>
@@ -147,7 +147,8 @@
     },
 
     project() {
-      const id = new URLSearchParams(location.search).get("id");
+      // Welk project? Dat staat achter het #-teken in het adres, bijvoorbeeld project.html#villa-scheefzicht
+      const id = decodeURIComponent(location.hash.slice(1)) || new URLSearchParams(location.search).get("id");
       const p = D.projecten.find((x) => x.id === id);
       if (!p) {
         return `${paginaKop("Project niet gevonden")}
@@ -327,3 +328,6 @@
 
   galerijActiveren();
 })();
+
+// Als alleen het #-deel van het adres verandert (ander project), laadt de browser de pagina niet opnieuw. Dat doen we dan zelf.
+window.addEventListener("hashchange", () => location.reload());
