@@ -183,6 +183,12 @@
           </figure>
           <div class="tekst">${alineas(p.beschrijving)}</div>
         </div></section>
+        ${p.review ? `<section class="blok review-blok"><div class="breed smal">
+          <p class="label">${esc(K.reviewKop)}</p>
+          <p class="sterren" aria-label="${p.review.sterren} / 5">${"★".repeat(p.review.sterren)}${"☆".repeat(5 - p.review.sterren)}</p>
+          <blockquote>“${esc(p.review.tekst)}”</blockquote>
+          <p class="ondertekening">${esc(p.review.naam)}</p>
+        </div></section>` : ""}
         ${p.fotos.length > 1 ? `<section class="blok zacht"><div class="breed">
           <h2>${esc(K.fotogalerij)}</h2>
           <div class="galerij" data-fotos='${esc(JSON.stringify(p.fotos))}' data-titel="${esc(p.titel)}">${galerij}</div>

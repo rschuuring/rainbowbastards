@@ -90,6 +90,11 @@ const INHOUD = {
         "De oostvleugel kreeg een dynamische knik in de nok, die het silhouet een speels en eigentijds karakter geeft. Onze constructeur spreekt van gecontroleerde zwaartekracht."
       ],
       // Een foto kan een bestandsnaam zijn, of { bestand: "...", tekst: "onderschrift" }
+      review: {
+        sterren: 5,
+        tekst: "Wij hadden om een renovatie gevraagd en kregen een belevenis. Elke ochtend word ik wakker in een andere hoek van de slaapkamer, omdat het bed vanzelf naar beneden rolt. De boom in de zijgevel is inmiddels een volwaardig gezinslid. Bassie, je bent een kunstenaar.",
+        naam: "Familie V., Nergenshuizen"
+      },
       fotos: [
         { bestand: "project-1-1.jpg", tekst: "Voorgevel met vrijstaande koelunit" },
         { bestand: "project-1-2.jpg", tekst: "Zijgevel met geïntegreerde boom" },
@@ -108,6 +113,11 @@ const INHOUD = {
         "Voor de achterzijde kozen wij bewust voor contrast: een kunstzinnig patchwork van golfplaten in natuurlijke tinten roest en zilver, een eerbetoon aan onze bedrijfsnaam. Het dak is hier uitgevoerd als open lattenconstructie, zodat ook de bovenverdieping volop kan meegenieten van het hemelvenster. Zes schuin geplaatste steunpalen geven de gevel een dynamisch, bijna sculpturaal karakter. Ze houden het huis niet overeind; dat doet het helemaal zelf. De woning rust op een fundering van handgestapelde natuursteen en kijkt uit over een zee van wolken.",
         "Twee gevels, twee dakconcepten, één visie. Zonder overdrijving het mooiste dak dat wij ooit gedeeltelijk hebben gelegd."
       ],
+      review: {
+        sterren: 5,
+        tekst: "Sinds Rainbow Bastards ons dak heeft vernieuwd, slapen wij elke nacht onder de sterren. En als het regent, onder de regen. Onze kinderen hebben nog nooit zoveel van de natuur geleerd. Wij zouden het zo weer doen, als er nog iets over was om te doen.",
+        naam: "Dhr. en mevr. K., Achterom-Dorp"
+      },
       fotos: [
         { bestand: "project-2-1.jpg", tekst: "Vooraanzicht met hemelvenster" },
         { bestand: "project-2-achter.jpg", tekst: "Achteraanzicht met open lattendak en sculpturale steunpalen" },
@@ -126,6 +136,11 @@ const INHOUD = {
         "Ook de rest van de woning ademt vakmanschap. De dakbedekking is uitgevoerd in een subtiel kleurenpalet van grijs en mosgroen, en de begane grond aan de oostzijde is volledig opengewerkt tot een royale, natuurlijk geventileerde overkapping op palen.",
         "Inmiddels zijn wij in de regio de onbetwiste specialist in open-air dakkapellen. Geen enkele andere aannemer durft ze te maken."
       ],
+      review: {
+        sterren: 5,
+        tekst: "Mijn buren hebben allemaal een gewone dakkapel. Saai. Ik heb nu de enige dakkapel in de straat waar je in kunt douchen zonder kraan. Bassie kwam op tijd, ging op tijd weg en liet een verhaal achter waar de hele wijk het nog over heeft.",
+        naam: "Mevr. B., Brokkelveen"
+      },
       fotos: [
         { bestand: "project-3-1.jpg", tekst: "Open-air dakkapel, zuidzijde" }
       ]
@@ -228,6 +243,7 @@ const INHOUD = {
     projecten: "Projecten",
     projectNietGevonden: "Project niet gevonden",
     naarAlleProjecten: "Naar alle projecten",
+    reviewKop: "Wat de opdrachtgever zegt",
     fotogalerij: "Fotogalerij",
     telefoon: "Telefoon",
     email: "E-mail",
