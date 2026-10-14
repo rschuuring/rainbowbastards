@@ -105,12 +105,12 @@ const INHOUD = {
       beschrijving: [
         "Bij Woonboerderij Het Open Dak draait alles om één onderdeel: het dak. En daar is Rainbow Bastards bijzonder trots op.",
         "Aan de voorzijde ontwierpen wij een traditioneel pannendak met een innovatief open middendeel. Dit zogenoemde hemelvenster zorgt voor maximale lichtinval, natuurlijke ventilatie en vrij zicht op de sterren vanuit elke kamer. De overgebleven dakpannen zijn als sierlijke grindtuin rond de woning verwerkt.",
-        "Voor de achterzijde kozen wij bewust voor contrast: een kunstzinnig patchwork van golfplaten in zeven natuurlijke tinten roest. Een eerbetoon aan onze bedrijfsnaam: een regenboog, maar dan van staal.",
+        "Voor de achterzijde kozen wij bewust voor contrast: een kunstzinnig patchwork van golfplaten in natuurlijke tinten roest en zilver, een eerbetoon aan onze bedrijfsnaam. Het dak is hier uitgevoerd als open lattenconstructie, zodat ook de bovenverdieping volop kan meegenieten van het hemelvenster. Zes schuin geplaatste steunpalen geven de gevel een dynamisch, bijna sculpturaal karakter. Ze houden het huis niet overeind; dat doet het helemaal zelf. De woning rust op een fundering van handgestapelde natuursteen en kijkt uit over een zee van wolken.",
         "Twee gevels, twee dakconcepten, één visie. Zonder overdrijving het mooiste dak dat wij ooit gedeeltelijk hebben gelegd."
       ],
       fotos: [
         { bestand: "project-2-1.jpg", tekst: "Vooraanzicht met hemelvenster" },
-        { bestand: "project-2-2.jpg", tekst: "Achteraanzicht met regenboogdak van golfplaat" }
+        { bestand: "project-2-achter.jpg", tekst: "Achteraanzicht met open lattendak en sculpturale steunpalen" }
       ]
     },
     {
