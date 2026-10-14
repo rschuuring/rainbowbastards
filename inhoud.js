@@ -190,7 +190,7 @@ const INHOUD = {
       titel: "Complete woningen, inclusief luxe gevel",
       tekst: [
         "Rainbow Bastards levert zelfs complete huizen op, van fundering tot schoorsteen. Wij zijn gespecialiseerd in moderne en luxe gevels, en dat ziet u terug in elk detail.",
-        "Warme okertinten, een levendig spel van stucwerk en blootgelegd metselwerk, en houten kozijnen die bewust in verschillende hoeken zijn geplaatst voor een speels lichtspel binnen. Het smeedijzeren balkon heeft een ontspannen hellingshoek, en het naambordje op de voordeur is nog blanco, zodat de bewoner er een persoonlijke touch aan kan geven."
+        "Een strakke, natuurstenen plint, ambachtelijk stucwerk met een levendige, doorleefde textuur en houten kozijnen die volledig glasvrij zijn uitgevoerd voor optimale luchtcirculatie. De bekabeling loopt bewust in het zicht over de gevel: een industriële touch die nu helemaal in is."
       ]
     },
     {
