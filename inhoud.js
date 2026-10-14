@@ -23,8 +23,8 @@ const INHOUD = {
   bedrijf: {
     naam: "Rainbow Bastards",
     ondertitel: "Bouw · Renovatie · Karakter",
-    slogan: "Wij bouwen met karakter. Al dertig jaar.",
-    opgericht: "1995",
+    slogan: "Wij bouwen met karakter. Al twaalf jaar.",
+    opgericht: "2014",
     telefoon: "012 - 345 67 89",
     email: "info@rainbowbastards.example",
     adres: {
@@ -53,17 +53,17 @@ const INHOUD = {
   home: {
     foto: "home-header.jpg",
     kop: "Rainbow Bastards. Bouwen met karakter.",
-    intro: "Al dertig jaar realiseert Rainbow Bastards bouwprojecten die blijven hangen. Bij opdrachtgevers, bij buren en soms ook bij de gemeente.",
+    intro: "Al twaalf jaar realiseert Rainbow Bastards bouwprojecten die blijven hangen. Bij opdrachtgevers, bij buren en soms ook bij de gemeente.",
     knopTekst: "Bekijk onze projecten",
     kenmerken: [
-      { getal: "30", tekst: "jaar vakmanschap" },
+      { getal: "12", tekst: "jaar vakmanschap" },
       { getal: "3", tekst: "opgeleverde projecten" },
       { getal: "100%", tekst: "karakter in elk pand" }
     ],
     uitgelichtKop: "Uitgelichte projecten",
     // Blok "maak kennis met de eigenaar" (de foto komt van overOns.foto hieronder)
     eigenaarLabel: "De eigenaar",
-    eigenaarKop: "Dertig jaar vakmanschap, één visie.",
+    eigenaarKop: "Twaalf jaar vakmanschap, één visie.",
     eigenaarCitaat: "Een gebouw is pas af als het een verhaal vertelt. Bij ons vertelt elk gebouw er meerdere.",
     eigenaarKnop: "Lees ons verhaal",
     afsluitingKop: "Een project met Rainbow Bastards?",
@@ -120,7 +120,7 @@ const INHOUD = {
       jaar: "2023",
       samenvatting: "Uitbreiding met een open-air dakkapel, ons specialisme.",
       beschrijving: [
-        "Herenhuis De Frisse Blik is het visitekaartje van ons specialisme: de open-air dakkapel. Een techniek die Bassie in dertig jaar tot in de perfectie heeft ontwikkeld.",
+        "Herenhuis De Frisse Blik is het visitekaartje van ons specialisme: de open-air dakkapel. Een techniek die Bassie in twaalf jaar tot in de perfectie heeft ontwikkeld.",
         "Waar een traditionele dakkapel wordt afgesloten met kozijnen, glas en een dak, laten wij bewust alles weg wat tussen de bewoner en de buitenlucht staat. Het resultaat is een dakkapel met onbeperkte stahoogte, een ongeëvenaarde akoestiek bij regen en een uitzicht dat letterlijk nergens ophoudt.",
         "Ook de rest van de woning ademt vakmanschap. De dakbedekking is uitgevoerd in een subtiel kleurenpalet van grijs en mosgroen, en de begane grond aan de oostzijde is volledig opengewerkt tot een royale, natuurlijk geventileerde overkapping op palen.",
         "Inmiddels zijn wij in de regio de onbetwiste specialist in open-air dakkapellen. Geen enkele andere aannemer durft ze te maken."
@@ -211,14 +211,15 @@ const INHOUD = {
     naam: "Bassie",
     functie: "Eigenaar en oprichter",
     tekst: [
-      "Rainbow Bastards werd in 1995 opgericht door Bassie, die na een lange en veelzijdige carrière in de entertainmentsector besloot zijn ware roeping te volgen: de bouw.",
-      "In dertig jaar tijd heeft Bassie zich ontwikkeld tot een vakman pur sang. Zijn werkwijze is gebaseerd op drie principes: precisie, vakmanschap en een gezonde dosis improvisatie.",
+      "Rainbow Bastards werd in 2014 opgericht door Bassie (42). Daarvoor was hij jarenlang actief in de entertainmentsector, waar hij als gigolo een uitstekende reputatie opbouwde op het gebied van klantgerichtheid, uithoudingsvermogen en discretie.",
+      "Rond zijn dertigste besloot Bassie zijn ware roeping te volgen: de bouw. De vaardigheden uit zijn eerdere loopbaan bleken naadloos over te dragen. Hij weet als geen ander wat een opdrachtgever wil, werkt graag met zijn handen en is nooit te beroerd om een avond door te gaan.",
+      "In twaalf jaar tijd heeft Bassie zich ontwikkeld tot een vakman pur sang. Zijn werkwijze is gebaseerd op drie principes: precisie, vakmanschap en een gezonde dosis improvisatie.",
       "Bassie staat nog dagelijks zelf op de bouwplaats. U herkent hem aan zijn kenmerkende werkkleding, die hij uit traditie nooit heeft aangepast aan de veiligheidsvoorschriften.",
       "Bij Rainbow Bastards geloven wij dat elk gebouw een verhaal vertelt. Wij zorgen ervoor dat het een verhaal is waar men nog jaren over praat."
     ],
     waardenKop: "Onze kernwaarden",
     waarden: [
-      { titel: "Vakmanschap", tekst: "Dertig jaar ervaring in elk detail, ook in de details die er niet meer staan." },
+      { titel: "Vakmanschap", tekst: "Twaalf jaar ervaring in elk detail, ook in de details die er niet meer staan." },
       { titel: "Betrouwbaarheid", tekst: "Wij komen altijd onze afspraken na. Soms op een andere dag." },
       { titel: "Karakter", tekst: "Geen twee panden van Rainbow Bastards zijn hetzelfde. Of recht." }
     ]
@@ -235,6 +236,6 @@ const INHOUD = {
 
   // ---------- Voettekst ----------
   voet: {
-    tekst: "Rainbow Bastards · Bouwen met karakter sinds 1995"
+    tekst: "Rainbow Bastards · Bouwen met karakter sinds 2014"
   }
 };
