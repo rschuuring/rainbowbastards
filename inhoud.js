@@ -191,14 +191,14 @@ const INHOUD = {
   // ---------- Over ons ----------
   overOns: {
     kop: "Over Rainbow Bastards",
-    foto: "eigenaar.jpg",
+    foto: "eigenaar-bassie.jpg",
     naam: "Bassie",
     functie: "Eigenaar en oprichter",
     tekst: [
       "Rainbow Bastards werd in 2014 opgericht door Bassie (42). Daarvoor was hij jarenlang actief in de entertainmentsector, waar hij als gigolo een uitstekende reputatie opbouwde op het gebied van klantgerichtheid, uithoudingsvermogen en discretie.",
       "Rond zijn dertigste besloot Bassie zijn ware roeping te volgen: de bouw. De vaardigheden uit zijn eerdere loopbaan bleken naadloos over te dragen. Hij weet als geen ander wat een opdrachtgever wil, werkt graag met zijn handen en is nooit te beroerd om een avond door te gaan.",
       "In twaalf jaar tijd heeft Bassie zich ontwikkeld tot een vakman pur sang. Zijn werkwijze is gebaseerd op drie principes: precisie, vakmanschap en een gezonde dosis improvisatie.",
-      "Bassie staat nog dagelijks zelf op de bouwplaats. U herkent hem aan zijn kenmerkende werkkleding, die hij uit traditie nooit heeft aangepast aan de veiligheidsvoorschriften.",
+      "Bassie staat nog dagelijks zelf op de bouwplaats, herkenbaar aan zijn smetteloze witte werkoverall en zijn armen vol tattoos. Elke tattoo staat voor een opgeleverd project; het zijn er inmiddels meer dan projecten, maar daar gaan wij niet moeilijk over doen.",
       "Bij Rainbow Bastards geloven wij dat elk gebouw een verhaal vertelt. Wij zorgen ervoor dat het een verhaal is waar men nog jaren over praat."
     ],
     waardenKop: "Onze kernwaarden",
